@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Halden Employee Onboarding</title>
+  <meta name="description" content="Interactive employee onboarding course built on the CONNECT™ methodology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="sr skip" href="#lesson">Skip to lesson</a>
+
+<header class="top">
+  <div class="bar">
+    <div class="brand">
+      <button class="icon-btn" id="t-menu" aria-expanded="false" aria-controls="side" aria-label="Show lessons"></button>
+      <span class="mark" aria-hidden="true"></span>
+      <b>Halden &amp; Co.</b><span class="brand-sub">Employee Onboarding</span>
+    </div>
+    <div class="tools">
+      <button class="xp-chip" id="t-xp" aria-haspopup="dialog" aria-label="Your points and badges"></button>
+      <button class="tool" id="t-restart" aria-label="Restart course"></button>
+      <button class="tool" id="t-size" aria-pressed="false" aria-label="Larger text">A+</button>
+      <button class="tool" id="t-lens" aria-pressed="false" aria-label="CONNECT lens: design notes"><span class="switch" aria-hidden="true"></span><span>CONNECT<span class="lbl-long">™ lens</span></span></button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"><i id="prog"></i></div>
+</header>
+
+<div class="shell">
+  <aside class="side" id="side" aria-label="Course lessons"></aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="main">
+    <nav class="chain-scroll" aria-label="CONNECT traceability chain"><ol class="chain" id="chain"></ol></nav>
+    <div class="content">
+      <div class="lesson-col">
+        <section class="lesson" id="lesson" tabindex="-1"></section>
+      </div>
+      <aside class="lens-panel" id="lens" aria-label="CONNECT lens: design notes for this screen"></aside>
+    </div>
+    <div class="player" id="player">
+      <button class="btn ghost" id="back"></button>
+      <span class="hint" id="hint" aria-live="polite"></span>
+      <button class="btn" id="next"></button>
+    </div>
+    <footer class="foot">
+      <span>Instructional design built on the CONNECT™ methodology · The Space of Agnes Elisa</span>
+      <button class="chip" id="reset">Restart course</button>
+    </footer>
+  </main>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="layer" id="layer" hidden></div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
